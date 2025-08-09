@@ -11,7 +11,7 @@ const div=document.getElementById("div")
 const btnBuscar= document.querySelector("#btnBuscar")
 
 btnBuscar.addEventListener("click", () => {
-  const nombreIngresado= document.querySelector("#nombreIngresado").value.toLowerCase()
+  const nombreIngresado= document.querySelector("#nombreIngresado").value.toLowerCase().trim()
   if(nombreIngresado===""){
     alert("Debes ingresar un nombre o apellido")
     return
