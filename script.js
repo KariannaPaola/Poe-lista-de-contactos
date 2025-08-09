@@ -26,6 +26,7 @@ btnBuscar.addEventListener("click", () => {
     contactosMostrados.innerHTML=contacto.nombre + " " + contacto.telefono
     contactosMostrados.classList.add('estilos')
     div.appendChild(contactosMostrados)
+    document.querySelector("#nombreIngresado").value=" "
     }
   }
 );
