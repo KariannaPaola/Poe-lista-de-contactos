@@ -1,4 +1,4 @@
-var contactos=[
+let contactos=[
   { nombre: "ana lopez", telefono: "+584143417985"},
   { nombre: "carlos oropeza", telefono: "+584143487245"},
   { nombre: "maría barile", telefono: "+584143457975"},
@@ -17,16 +17,18 @@ btnBuscar.addEventListener("click", () => {
     return
   }
   let contactosFiltrados = contactos.filter((contacto) => contacto.nombre.includes(nombreIngresado))
-  if(contactosFiltrados.length===0)
+  if(contactosFiltrados.length===0){
     alert("No hay coincidencias")
-  else if (contactosFiltrados.length>=1)
-    div.innerHTML=" "
+  }
+  else if (contactosFiltrados.length>=1){
+    div.innerHTML=""
     for(let contacto of contactosFiltrados){
     const contactosMostrados=document.createElement("li")
     contactosMostrados.innerHTML=contacto.nombre + " " + contacto.telefono
     contactosMostrados.classList.add('estilos')
     div.appendChild(contactosMostrados)
-    document.querySelector("#nombreIngresado").value=" "
+    document.querySelector("#nombreIngresado").value=""
+    }
     }
   }
 );
