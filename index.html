@@ -5,18 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
       <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-      <link rel="stylesheet" href="./styles.css">
+      
   </head>
-  <body class="bg-teal-800 flex flex-col h-screen items-center justify-center font-bold">
-    <h1>LISTA DE CONTACTOS</h1><br>
-    <div class="flex bg-white p-[12px] gap-2 justify-between rounded-full">
-      <input type="text" id="nombreIngresado" placeholder="Ingresa un nombre"><br><br>
-      <button type="button" id="btnBuscar"><i class="fa-solid fa-magnifying-glass"></i></button>
-    </div><br>
-    <div id="div">
+  <body class="min-h-screen bg-gradient-to-br from-teal-700 to-teal-900 flex items-center justify-center font-sans">
+  <div class="bg-white w-[380px] p-6 rounded-2xl shadow-xl">
+    <h1 class="text-2xl font-bold text-center text-gray-800 mb-6">
+      Lista de Contactos
+    </h1>
+    <div class="flex items-center gap-2 mb-5">
+      <input 
+        type="text"
+        id="nombreIngresado"
+        placeholder="Ingresa un nombre"
+        class="flex-1 px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-teal-500">
+      <button 
+        type="button"
+        id="btnBuscar"
+        class="bg-teal-600 text-white p-3 rounded-full hover:bg-teal-700 transition shadow-md">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
     </div>
-    
-    <script src="https://kit.fontawesome.com/2acc38f85e.js" crossorigin="anonymous"></script>
-    <script src="./script.js"></script>
-  </body>
+    <div id="div" class="flex flex-col gap-3">
+      <div class="flex items-center justify-between bg-gray-50 border border-gray-200 px-4 py-2 rounded-lg shadow-sm hover:shadow-md transition">
+        <span class="text-gray-700 font-medium">Juan Pérez</span>
+        <button class="text-gray-400 hover:text-red-500 transition">
+          <i class="fa-solid fa-trash"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="https://kit.fontawesome.com/2acc38f85e.js" crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
+
+</body>
 </html>
